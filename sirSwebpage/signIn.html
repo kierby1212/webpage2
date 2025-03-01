@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Sign In</title>
+</head>
+<body>
+  <section class="signup-background">
+    <div class="sign-up-container" id="sign-up" style="display: none;">
+        <h1>Register</h1>
+        <form id="signUpForm" >
+            <div class="input-group">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                <label for="fname">First Name</label>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-group">
+                <input type="text" name="lname" placeholder="Last Name" required>
+                <label for="lname">Last Name</label>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Email" required>
+                <label for="lname">Email</label>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+                <label for="password">Password</label>
+                <i class='bx bxs-lock-alt'></i>               
+            </div>
+           <input type="submit" class="btn" value="Sign Up" name="signUp">    
+           <div class="links">
+            <p>Already Have Account?</p>
+            <button id="signInButton" type="button">Sign In</button>
+           </div>       
+        </form>
+    </div>
+
+    <div class="sign-up-container" id="sign-in">
+        <h1>Sign In</h1>
+        <form id="signInForm" >
+        
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Email" required>
+                <label for="lname">Email</label>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+                <label for="password">Password</label>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+           <input type="submit" class="btn" value="Sign In" name="signin">    
+           <div class="links">
+            <p>Dont't Have Account?</p>
+            <button id="signUpButton" type="button">Sign Up</button>
+            <p id="error-message" style="color: red; display: none;">Incorrect email or password.</p>
+           </div>       
+        </form>
+    </div>
+  </section>
+        
+
+        
+  <script src="script.js"></script>
+</body>
+</html>

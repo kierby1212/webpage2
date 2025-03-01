@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+:root{
+    --main-color:#7fc7d9;
+    --second-color:#365486;
+    --third-color:#0f1035;
+    --main-bg:#dcf2f1;
+}
+.header{
+   position: relative;
+   background-size: cover;
+   min-height: 100vh;
+   flex-direction: column;
+   display:flex;
+   background-image: url('./mediaAssets/jjj.jpg');
+}
+
+.header-content{
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+     justify-content: center;   
+    margin-top: 20rem;
+    padding: 1rem;
+    gap: 1rem;
+  color: white;
+}
+.header-content h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--third-color);
+    width: 100%;
+    position: fixed;
+   
+}
+.burger {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+   padding: 1rem;
+  
+}
+
+.logo{
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links{
+    display: flex;
+    color: white;
+    gap: 1rem;
+}
+.nav-links li{
+    padding: 1rem;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 1.2rem;
+}
+.nav-links li:hover{
+    background-color: var(--second-color);
+}
+.nav-links li a{
+    color:white;
+}
+.login-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+   
+}
+.login-icon i{
+    margin: 1.1rem;
+    padding: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+.login-icon :hover{
+   
+    background-color: var(--second-color);
+   
+}
+.header-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--main-bg);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    border: none;
+    border-radius: 0.4rem;
+}
+.header-btn:hover{
+    background: var(--third-color);
+    color: white;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.icons i {
+    font-size: 2.2rem;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icons i:hover {
+    color: var(--main-bg);
+    transform: scale(1.2);
+}
+
+.about{
+   
+    background-color: var(--main-bg);
+   min-height: 50vh;
+   padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.allabtcontainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    max-width: 300px;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--second-color);
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 1rem 1rem;
+}
+
+.contact {
+    background-color: var(--second-color);
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+.contact h1 {
+    font-size: 2rem;
+    color: var(--main-bg);
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1rem;
+    color:var(--main-bg);
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--main-color);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact form button:hover {
+    background-color: var(--third-color);
+    color: white;
+}
+footer {
+    background-color: var(--main-bg);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+}
+.signup-background{
+    background-image: url('./mediaAssets/jjj.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sign-up-container{
+    background-color: var(--second-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+}
+.sign-up-container h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-left: 2.5rem;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+}
+.input-group input:focus {
+    outline: none;
+    border-bottom-color: var(--main-color);
+}
+
+.input-group input::placeholder {
+    color: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    left: 2.5rem;
+    top: 0.75rem;
+    color: white;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -1rem;
+    font-size: 0.75rem;
+    color: var(--main-color);
+}
+
+.input-group i {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.25rem;
+}
+.input{
+    background-color:transparent;
+}
+.btn {
+    background-color: var(--main-color);
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--third-color);
+    color: white;
+}
+
+.links {
+    margin-top: 1rem;
+    color: white;
+}
+
+.links button {
+    background: none;
+    border: none;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+.links button:hover {
+    color: var(--third-color);
+}
+@media (max-width: 768px) {
+    .nav-bar{
+        justify-content: space-between;
+        z-index: 1;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .burger{
+        display: block;
+        
+    }
+    .nav-links {
+       display: none;
+        flex-direction: column;
+        width: 40%;
+        position: absolute;
+        text-align: center;
+        background: var(--second-color);
+        top: 59px;
+        border-bottom-right-radius: 0.7rem;
+        overflow: hidden;
+    }
+    .nav-links li{
+        display: block;
+        padding: 1rem;
+    }
+    .nav-links.show {
+        display:flex; 
+    }
+
+    .allabtcontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content {
+        margin-top: 15rem;
+    }
+    .allabtcontainer {
+        grid-template-columns: 1fr;
+    }
+    .header-content {
+        margin-top: 15rem;
+    }
+    .home-page img {
+        width: 300px;
+        height: 350px;
+    }
+}
+.home-page{
+    background-image: url(./mediaAssets/jjj.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.home-container{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--main-bg);
+    text-align: center;
+}
+.home-page img{
+    width: 100%;
+    
+}
+.home-btn{
+    display: inline-block;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    color:white;
+    padding: 1rem;
+    background-color: var(--third-color);
+}
