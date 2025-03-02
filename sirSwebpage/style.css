@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    list-style: none;
    
 }
 :root{
@@ -226,8 +227,8 @@
     color: white;
 }
 footer {
-    background-color: var(--main-bg);
-    color: black;
+    background-color: var(--third-color);
+    color: white;
     text-align: center;
     padding: 1rem;
 }
@@ -392,30 +393,184 @@ footer {
         height: 350px;
     }
 }
-.home-page{
-    background-image: url(./mediaAssets/jjj.jpg);
-    background-size: cover;
-    min-height: 100vh;
+.home-nav-bar{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    background-color: var(--third-color);
+    width: 100%;
+}
+.logout-btn{
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.logout-btn:hover{
+    background-color:var(--second-color);
+}
+.item-section{
+    padding: 1rem;
+    background-color: white;
+}
+.all-item-container {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    padding-top: 8rem; 
+}
+
+.item-container {  
+    
+    background-color:white;
+    padding: 1.3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
    
 }
-.home-container{
-    margin: 1rem;
-    padding: 1rem;
-    background-color: var(--main-bg);
-    text-align: center;
-}
-.home-page img{
-    width: 100%;
+.item-container:hover {  
+    border-radius: 0.3rem;
+    background-color:var(--second-color);
+    padding: 1.3rem;
+    color: white;
     
 }
-.home-btn{
+.item-container img {
+    margin-bottom: 0.3rem;
+    max-width: 100%;
+    height: auto;
+    border: 0.1rem solid black;
+}
+
+.home-btn {
     display: inline-block;
-    border-radius: 0.3rem;
-    margin-top: 1rem;
-    color:white;
-    padding: 1rem;
+    margin-top: 10px;
+    padding: 10px 20px;
     background-color: var(--third-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.home-header{
+   position: fixed;
+   width: 100%;
+}
+.home-nav-bar{
+    width: 100%;
+}
+.home-logo{
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.home-nav-links{
+    display: flex;
+    color: white;
+    gap: 1rem;
+}
+.home-nav-links li{
+    padding: 1rem;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 1.2rem;
+}
+.home-nav-links li:hover{
+    background-color: var(--second-color);
+}
+.home-nav-links li a{
+    color: white;
+}
+.shop-nav-bar{  
+    min-height: 4vh;
+    width: 100%;
+    background-color:var(--second-color);
+   
+}
+.shop-links{
+    display: flex;
+    justify-content: center;
+    
+}
+.shop-links li {
+    padding: 1rem;
+   
+}
+.shop-links li:hover{
+    background-color: var(--third-color);
+   
+}
+.shop-links li a{
+    color: white;   
+}
+.shop-links li a:hover{
+    color: white;
+}
+@media(max-width:768px){
+    .all-item-container{
+        grid-template-columns: repeat(3,1fr)
+    }
+   
+}
+@media(max-width:600px){
+    .all-item-container{
+        grid-template-columns: repeat(2,1fr)
+    }
+   
+}
+@media(max-width:425px){
+    .all-item-container{
+        grid-template-columns: repeat(1,1fr)
+    }
+    .item-container{
+        padding: 0.7rem;
+    }
+    
+}
+@media(max-width:389px){
+    
+    .shop-links li {
+        padding: 0.6rem;
+        
+    }
+}
+.home-burger{
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+   padding: 1rem;
+}
+@media (max-width: 768px) {
+    
+   
+    .home-nav-bar{
+        justify-content: space-between;
+    }
+    .home-nav-bar .home-burger {
+        display: block;
+    }
+    .home-nav-bar .home-nav-links {
+        display: none;
+    }
+    .home-nav-bar .home-nav-links.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 59px;
+        background: var(--second-color);
+        border-bottom-right-radius: 0.7rem;
+        overflow: hidden;
+    }
+    .home-nav-bar .home-nav-links li {
+        display: block;
+        padding: 1rem;
+    }
+    .home-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
